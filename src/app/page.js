@@ -28,7 +28,8 @@ export default function Home() {
       
       <Kartu judul="Tentang Saya">
         <p className="leading-relaxed text-gray-700">
-          Saya adalah siswi kelas XI-PPLG yang memiliki rasa ingin tahu yang tinggi dan senang mengeksplorasi hal-hal baru, khususnya di bidang teknologi. Selain mempelajari pengembangan web, saya aktif dalam kegiatan public speaking untuk melatih kemampuan berkomunikasi.
+          Saya adalah siswi kelas XI-PPLG yang memiliki rasa ingin tahu yang tinggi dan senang mengeksplorasi hal-hal baru, khususnya di bidang teknologi.
+          Selain mempelajari pengembangan web, saya aktif dalam kegiatan public speaking untuk melatih kemampuan berkomunikasi.
         </p>
       </Kartu>
 
@@ -40,9 +41,9 @@ export default function Home() {
             <li>Eksplor alam</li>
             <li>Mendengarkan musik</li>
             <li>Travelling</li>
-            <li>Berlatih public speaking dan berdiskus</li>
+            <li>Berlatih public speaking dan berdiskusI</li>
             <li>Menonton film</li>
-            <li>Mencoba teknologi dan aplikasi baru</li>
+            <li>Mencoba teknologi baru</li>
           </ul>
         </Kartu>
 
