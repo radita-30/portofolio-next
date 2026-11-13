@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Kartu from "@/components/Kartu";
 import SkillCard from "@/components/SkillCard";
 
 const skills = [
@@ -9,93 +10,86 @@ const skills = [
   { nama: "JavaScript", level: "Dasar" },
 ];
 
-const hobi = ["Memasak", "Mendengarkan musik", "Eksplor alam"];
-
-const langkahCita = [
-  "Menuntaskan Kelas Industri UBIG sampai Semester 4",
-  "Magang di perusahaan teknologi",
-  "Bekerja sebagai Web Developer",
-];
-
-const jadwal = [
-  { hari: "Senin", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
-  { hari: "Rabu", waktu: "19.00 - 21.00", kegiatan: "Mengerjakan tugas praktik" },
-  { hari: "Jumat", waktu: "19.30 - 20.30", kegiatan: "Merekam video dan menulis laporan" },
+const jadwalBelajar = [
+  { hari: "Rabu", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
+  { hari: "Sabtu", waktu: "16.00 - 21.00", kegiatan: "Mengerjakan tugas praktikum" },
+  { hari: "Minggu", waktu: "19.30 - 20.30", kegiatan: "Menonton video dan menulis laporan" },
 ];
 
 export default function Home() {
   return (
-  <main className="mx-auto max-w-5xl px-4 py-10">
-  <Hero
-    nama="Radita Oktavia Eka Putri"
-    tagline="Siswa kelas XI SMK, calon Junior Web Developer di Kelas Industri UBIG."
-  />
+    <main className="mx-auto max-w-5xl space-y-8 px-4 py-10">
+      
+      <Hero
+        nama="Radita Oktavia Eka Putri"
+        tagline="Siswa kelas XI PPLG, calon Junior Web Developer di Kelas Industri UBIG."
+      />
 
-  <section className="mt-10 rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-    <h2 className="mb-2 text-2xl font-bold text-utama">Tentang Saya</h2>
-    <p className="text-gray-700">
-      Saya senang mencoba hal baru di dunia teknologi. Saya ingin bisa
-      membuat website yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.
-    </p>
-  </section>
+      
+      <Kartu judul="Tentang Saya">
+        <p className="leading-relaxed text-gray-700">
+          Saya adalah siswi kelas XI-PPLG yang memiliki rasa ingin tahu yang tinggi dan senang mengeksplorasi hal-hal baru, khususnya di bidang teknologi. Selain mempelajari pengembangan web, saya aktif dalam kegiatan public speaking untuk melatih kemampuan berkomunikasi.
+        </p>
+      </Kartu>
 
-  <div className="mt-4 grid gap-4 md:grid-cols-2">
-    <section className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-      <h2 className="mb-2 text-2xl font-bold text-utama">Hobi</h2>
-      <ul className="list-disc space-y-1 pl-5 text-gray-700">
-        {hobi.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </section>
+      
+      <div className="grid gap-6 md:grid-cols-2">
+        <Kartu judul="Hobi">
+          <ul className="list-disc space-y-1 pl-5 text-gray-700">
+            <li>Memasak</li>
+            <li>Eksplor alam</li>
+            <li>Mendengarkan musik</li>
+            <li>Travelling</li>
+            <li>Berlatih public speaking dan berdiskus</li>
+            <li>Menonton film</li>
+            <li>Mencoba teknologi dan aplikasi baru</li>
+          </ul>
+        </Kartu>
 
-    <section className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-      <h2 className="mb-2 text-2xl font-bold text-utama">Cita-cita</h2>
-      <p className="text-gray-700">
-        Menjadi <strong>Full Stack Web Developer</strong>. Langkah yang saya
-        rencanakan:
-      </p>
-      <ol className="mt-2 list-decimal space-y-1 pl-5 text-gray-700">
-        {langkahCita.map((langkah) => (
-          <li key={langkah}>{langkah}</li>
-        ))}
-      </ol>
-    </section>
-  </div>
-
-  <section className="mt-10">
-    <h2 className="mb-4 text-2xl font-bold text-utama">Keahlian</h2>
-    <div className="grid gap-4 md:grid-cols-3">
-{skills.map((skill) => (
-<SkillCard key={skill.nama} nama={skill.nama}
-level={skill.level} />
-    ))}
+        <Kartu judul="Cita-cita">
+          <p className="mb-3 text-gray-700">
+            Menjadi Hakim sekaligus pemilik Software House sendiri. Langkah yang saya rencanakan:
+          </p>
+          <ol className="list-decimal space-y-1 pl-5 text-gray-700">
+            <li>Menyelesaikan pendidikan SMK, lalu melanjutkan kuliah di Fakultas Hukum</li>
+            <li>Mengasah kemampuan pemrograman melalui proyek dan magang di bidang teknologi</li>
+            <li>Merintis software house sendiri sambil menempuh jalur karier sebagai hakim</li>
+          </ol>
+        </Kartu>
       </div>
-  </section>
 
-  <section className="mt-10 rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-    <h2 className="mb-4 text-2xl font-bold text-utama">Jadwal Belajar</h2>
-    <div className="overflow-x-auto">
-      <table className="w-full text-left text-sm">
-        <thead className="bg-utama text-white">
-          <tr>
-            <th className="px-3 py-2 font-semibold">Hari</th>
-            <th className="px-3 py-2 font-semibold">Waktu</th>
-            <th className="px-3 py-2 font-semibold">Kegiatan</th>
-          </tr>
-        </thead>
-        <tbody>
-          {jadwal.map((item) => (
-            <tr key={item.hari} className="border-b border-gray-200">
-              <td className="px-3 py-2">{item.hari}</td>
-              <td className="px-3 py-2">{item.waktu}</td>
-              <td className="px-3 py-2">{item.kegiatan}</td>
-            </tr>
+      
+      <Kartu judul="Keahlian">
+        <div className="grid gap-4 md:grid-cols-3">
+          {skills.map((skill) => (
+            <SkillCard key={skill.nama} nama={skill.nama} level={skill.level} />
           ))}
-        </tbody>
-      </table>
-    </div>
-  </section>
-</main>
-);
+        </div>
+      </Kartu>
+
+      
+      <Kartu judul="Jadwal Belajar">
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-left text-sm text-gray-700">
+            <thead>
+              <tr className="bg-utama text-white">
+                <th className="p-3">Hari</th>
+                <th className="p-3">Waktu</th>
+                <th className="p-3">Kegiatan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {jadwalBelajar.map((item, index) => (
+                <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
+                  <td className="p-3 font-medium">{item.hari}</td>
+                  <td className="p-3">{item.waktu}</td>
+                  <td className="p-3">{item.kegiatan}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Kartu>
+    </main>
+  );
 }
