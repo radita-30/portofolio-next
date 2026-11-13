@@ -41,9 +41,9 @@ export default function Home() {
             <li>Eksplor alam</li>
             <li>Mendengarkan musik</li>
             <li>Travelling</li>
-            <li>Berlatih public speaking dan berdiskusI</li>
+            <li>Berlatih public speaking dan berdiskusi</li>
             <li>Menonton film</li>
-            <li>Mencoba teknologi baru</li>
+            <li>Mencoba teknologi dan aplikasi baru</li>
           </ul>
         </Kartu>
 
