@@ -2,7 +2,7 @@ export const proyek = [
     {
         slug: "sistem-fotocopy",
         judul: "Sistem Hitung Fotocopy",
-        kategori: "JavaScript",
+        kategori: "PHP",
         minggu: "Minggu 06",
         gambar: "/proyek/proyek-fotocopy.png",
         deskripsi: "Program untuk menghitung biaya fotocopy.",
@@ -41,7 +41,7 @@ export const proyek = [
     {
         slug: "todo-list-pink",
         judul: "To-Do List Versi 1",
-        kategori: "JavaScript",
+        kategori: "HTML",
         minggu: "Minggu 08",
         gambar: "/proyek/proyek-todolist1.png",
         deskripsi: "Daftar tugas dengan tampilan warna pink.",
@@ -54,7 +54,7 @@ export const proyek = [
     {
         slug: "todo-list-gelap",
         judul: "To-Do List Versi 2",
-        kategori: "JavaScript",
+        kategori: "HTML",
         minggu: "Minggu 08",
         gambar: "/proyek/proyek-todolist2.png",
         deskripsi: "Daftar tugas dengan tampilan tema gelap.",
@@ -67,7 +67,7 @@ export const proyek = [
     {
         slug: "biaya-parkir",
         judul: "Program Hitung Biaya Parkir",
-        kategori: "JavaScript",
+        kategori: "PHP",
         minggu: "Minggu 06",
         gambar: "/proyek/proyek-parkir.png",
         deskripsi: "Program untuk menghitung biaya parkir kendaraan.",

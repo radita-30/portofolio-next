@@ -1,118 +1,34 @@
+import FormKontak from "@/components/FormKontak";
+
 export const metadata = {
     title: "Kontak",
     description: "Hubungi Radita Oktavia Eka Putri melalui form kontak, email, atau GitHub.",
 };
 
-const inputClass = "mt-1 w-full rounded-lg border border-gray-300 bg-white p-2";
-
 export default function Kontak() {
     return (
-        <main className="mx-auto max-w-5xl px-4 py-10">
-            <h1 className="text-3xl font-bold text-utama md:text-4xl">Hubungi Saya</h1>
-            <p className="mt-3 text-lg text-gray-700">
+        <main className="mx-auto w-full max-w-5xl px-4 py-10">
+            <h1 className="text-3xl font-bold text-utama dark:text-sky-200 dark:text-sky-200 md:text-4xl">Hubungi Saya</h1>
+            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300 dark:text-gray-300">
                 Punya pertanyaan atau ingin bekerja sama? Isi form berikut.
             </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="rounded-xl bg-white p-6 shadow md:col-span-2">
-                    <form className="space-y-4">
-                        <div>
-                            <label htmlFor="nama" className="block font-semibold">
-                                Nama lengkap
-                            </label>
-                            <input
-                                type="text"
-                                id="nama"
-                                name="nama"
-                                placeholder="Contoh: Budi Santoso"
-                                required
-                                className={inputClass}
-                            />
-                        </div>
+                <section className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 dark:bg-gray-800 p-6 shadow-sm md:col-span-2">
+                    <FormKontak />
+                </section>
 
-                        <div>
-                            <label htmlFor="email" className="block font-semibold">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="nama@gmail.com"
-                                required
-                                className={inputClass}
-                            />
-                        </div>
-
-                        <div>
-                            <label htmlFor="hp" className="block font-semibold">
-                                Nomor HP
-                            </label>
-                            <input
-                                type="tel"
-                                id="hp"
-                                name="hp"
-                                placeholder="081234567890"
-                                className={inputClass}
-                            />
-                        </div>
-
-                        <div>
-                            <label htmlFor="keperluan" className="block font-semibold">
-                                Keperluan
-                            </label>
-                            <select id="keperluan" name="keperluan" required className={inputClass}>
-                                <option value="">-- Pilih keperluan --</option>
-                                <option value="kerja-sama">Kerja sama</option>
-                                <option value="pertanyaan">Pertanyaan</option>
-                                <option value="lainnya">Lainnya</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label htmlFor="pesan" className="block font-semibold">
-                                Pesan
-                            </label>
-                            <textarea
-                                id="pesan"
-                                name="pesan"
-                                rows={5}
-                                placeholder="Tulis pesanmu di sini"
-                                required
-                                className={inputClass}
-                            />
-                        </div>
-
-                        <button
-                            type="button"
-                            className="rounded-lg bg-red-600 px-5 py-2 font-semibold text-white hover:bg-red-700"
-                        >
-                            Kirim Pesan
-                        </button>
-                    </form>
-                </div>
-
-                <aside className="h-fit rounded-xl bg-white p-6 shadow">
-                    <h2 className="text-lg font-bold text-utama">Temukan Saya di</h2>
-                    <ul className="mt-3 space-y-4 text-sm">
+                <aside className="rounded-xl bg-white dark:bg-gray-800 dark:bg-gray-800 p-6 shadow">
+                    <h2 className="text-lg font-bold text-utama dark:text-sky-200 dark:text-sky-200">Temukan Saya di</h2>
+                    <ul className="mt-3 space-y-2 text-sm">
                         <li>
-                            <p className="font-semibold text-gray-900">GitHub</p>
-                            <a
-                                href="https://github.com/radita-30"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-900 hover:underline"
-                            >
-                                https://github.com/radita-30
+                            <a href="https://github.com/radita-30" target="_blank" rel="noopener noreferrer" className="text-utama dark:text-sky-200 dark:text-sky-200 hover:underline">
+                                GitHub
                             </a>
                         </li>
                         <li>
-                            <p className="font-semibold text-gray-900">Email</p>
-                            <a
-                                href="mailto:EMAIL-KAMU@gmail.com"
-                                className="text-gray-900 hover:underline"
-                            >
-                                rrdita.putri.09@gmail.com
+                            <a href="mailto:radita104@smp.belajar.id" className="text-utama dark:text-sky-200 dark:text-sky-200 hover:underline">
+                                radita104@smp.belajar.id
                             </a>
                         </li>
                     </ul>
