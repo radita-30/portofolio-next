@@ -1,18 +1,10 @@
 import Kartu from "@/components/Kartu";
-import SkillCard from "@/components/SkillCard";
 
 export const metadata = {
     title: "Tentang",
     description: "Cerita, hobi, cita-cita, dan jadwal belajar Radita Putri.",
 };
 
-const skills = [
-  { nama: "HTML", level: "Menengah" },
-  { nama: "CSS", level: "Menengah" },
-  { nama: "Git dan GitHub", level: "Dasar" },
-  { nama: "Desain poster dengan Canva", level: "Mahir" },
-  { nama: "JavaScript", level: "Dasar" },
-];
 
 const jadwalBelajar = [
   { hari: "Rabu", waktu: "19.00 - 20.00", kegiatan: "Membaca ulang modul" },
@@ -56,14 +48,6 @@ export default function Tentang() {
                     </ol>
                 </Kartu>
             </div>
-
-            <Kartu judul="Keahlian">
-                <div className="grid gap-4 md:grid-cols-3">
-                    {skills.map((skill) => (
-                        <SkillCard key={skill.nama} nama={skill.nama} level={skill.level} />
-                    ))}
-                </div>
-            </Kartu>
 
             <Kartu judul="Jadwal Belajar">
                 <div className="overflow-x-auto">
