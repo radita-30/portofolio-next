@@ -16,7 +16,7 @@ export default function ProyekCard({ proyek }) {
           className="aspect-[16/10] w-full object-cover object-top"
         />
         <CardHeader>
-          <Badge>{proyek.kategori}</Badge>
+          <Badge variant={proyek.kategori.toLowerCase()}>{proyek.kategori}</Badge>
           <CardTitle className="text-lg text-primary">{proyek.judul}</CardTitle>
           <CardDescription>{proyek.deskripsi}</CardDescription>
         </CardHeader>

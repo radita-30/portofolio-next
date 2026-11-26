@@ -45,7 +45,7 @@ export default function FilterProyek({ proyek }) {
                     value={kata}
                     onChange={(e) => setKata(e.target.value)}
                     placeholder="Contoh: kalkulator"
-                    className="mt-1 w-full rounded-lg border border-input bg-card dark:text-gray-100 p-2 md:w-80"
+                    className="mt-1 w-full rounded-lg border border-input bg-card p-2 md:w-80"
                 />
                 {kata !== "" && (
                     <Button variant="link" onClick={() => setKata("")} className="mt-2 px-0 text-aksen">

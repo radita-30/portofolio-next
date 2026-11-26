@@ -1,39 +1,54 @@
 import FormKontak from "@/components/FormKontak";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const metadata = {
-    title: "Kontak",
-    description: "Hubungi Radita Oktavia Eka Putri melalui form kontak, email, atau GitHub.",
+  title: "Kontak",
+  description: "Hubungi Radita Oktavia Eka Putri melalui form kontak, email, atau GitHub.",
 };
 
 export default function Kontak() {
-    return (
-        <main className="mx-auto w-full max-w-5xl px-4 py-10">
-            <h1 className="text-3xl font-bold text-primary dark:text-sky-200 md:text-4xl">Hubungi Saya</h1>
-            <p className="mt-3 text-lg text-muted-foreground dark:text-gray-300">
-                Punya pertanyaan atau ingin bekerja sama? Isi form berikut.
-            </p>
+  return (
+    <main className="mx-auto w-full max-w-5xl px-4 py-10">
+      <h1 className="text-3xl font-bold text-primary md:text-4xl">Hubungi Saya</h1>
+      <p className="mt-3 text-lg text-muted-foreground">
+        Punya pertanyaan atau ingin bekerja sama? Isi form berikut.
+      </p>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <section className="rounded-xl border border-border bg-card dark:bg-gray-800 p-6 shadow-sm md:col-span-2">
-                    <FormKontak />
-                </section>
+      <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <Card className="md:col-span-2">
+          <CardContent>
+            <FormKontak />
+          </CardContent>
+        </Card>
 
-                <aside className="rounded-xl bg-card dark:bg-gray-800 p-6 shadow">
-                    <h2 className="text-lg font-bold text-primary dark:text-sky-200">Temukan Saya di</h2>
-                    <ul className="mt-3 space-y-2 text-sm">
-                        <li>
-                            <a href="https://github.com/radita-30" target="_blank" rel="noopener noreferrer" className="text-primary dark:text-sky-200 hover:underline">
-                                GitHub
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:radita104@smp.belajar.id" className="text-primary dark:text-sky-200 hover:underline">
-                                radita104@smp.belajar.id
-                            </a>
-                        </li>
-                    </ul>
-                </aside>
-            </div>
-        </main>
-    );
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold text-primary">Temukan Saya di</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="https://github.com/radita-30"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:radita104@smp.belajar.id"
+                  className="text-primary hover:underline"
+                >
+                  radita104@smp.belajar.id
+                </a>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+    </main>
+  );
 }
